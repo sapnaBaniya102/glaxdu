@@ -34,7 +34,9 @@
                         <input name="email" placeholder="Email*" type="email">
                         <input name="subject" placeholder="Subject*" type="text">
                         <textarea name="details" placeholder="Message"></textarea>
-                      <button type="submit" name="submit" id="submit" class="btn btn-primary btn-block">Send Message</button>
+                        <button type="submit"
+                        class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10"
+                        data-loading-text="Please wait..." name="submit">Send Message</button>
                     </form>
                 </div>
             </div>

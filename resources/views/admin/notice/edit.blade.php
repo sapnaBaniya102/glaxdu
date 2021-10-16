@@ -76,7 +76,7 @@
 																			<div class="form-group row">
 																				<label class="col-xl-3 col-lg-3 col-form-label">Notice detail:</label>
 																				<div class="col-lg-9 col-xl-9">
-																					<input class="form-control form-control-solid form-control-lg" name="detail" type="textarea" value="<{{$notice->detail}}" />
+																					<input class="form-control form-control-solid form-control-lg" name="detail" type="textarea" value="{{$notice->detail}}" />
 																				</div>
 																			</div>
 																			<!--end::Group-->
@@ -84,11 +84,11 @@
 																			<div class="form-group row">
 																				<label class="col-xl-3 col-lg-3 col-form-label">Notice Category</label>
 																				<div class="col-lg-9 col-xl-9">
-																					<input class="form-control form-control-solid form-control-lg" name="category" type="date" value="{{$notice->category}}" />
+																					<input class="form-control form-control-solid form-control-lg" name="category" type="text" value="{{$notice->category}}" />
 																				</div>
 																			</div>
 																			<!--end::Group-->
-                                                                            >
+
 																		<!--begin::Group-->
 																		<div class="form-group row">
 																			<label class="col-form-label col-lg-3 col-sm-12">Status</label>

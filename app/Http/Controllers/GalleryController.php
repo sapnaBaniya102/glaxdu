@@ -106,7 +106,7 @@ class GalleryController extends Controller
     public function destroy(gallery $gallery)
     {
          $gallery->delete();
-        return redirect('gallery')-with('deleted', 'deleted succesfully');
+        return redirect('gallery')->with('deleted', 'deleted succesfully');
     }
 
 }

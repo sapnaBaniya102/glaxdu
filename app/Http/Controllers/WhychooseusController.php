@@ -69,9 +69,9 @@ class WhychooseusController extends Controller
      * @param  \App\Models\Whychooseus  $whychooseus
      * @return \Illuminate\Http\Response
      */
-    public function edit(Whychooseus $whychooseus)
+    public function edit(Whychooseus $whychooseu)
     {
-        return view('admin.whychooseus.edit',compact('whychooseus'));
+        return view('admin.whychooseus.edit',compact('whychooseu'));
     }
 
     /**
@@ -81,7 +81,7 @@ class WhychooseusController extends Controller
      * @param  \App\Models\Whychooseus  $whychooseus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Whychooseus $whychooseus)
+    public function update(Request $request, Whychooseus $whychooseu)
     {
         $request->validate([
             'heading'=>'required',
@@ -89,7 +89,7 @@ class WhychooseusController extends Controller
             'status'=>'required',
         ]);
 
-        $whychooseus->update($request->all());
+        $whychooseu->update($request->all());
         return redirect()->route('whychooseus.index')->with('update','Whychooseus update successfully.');
     }
 
@@ -99,9 +99,9 @@ class WhychooseusController extends Controller
      * @param  \App\Models\Whychooseus  $whychooseus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Whychooseus $whychooseus)
+    public function destroy(Whychooseus $whychooseu)
     {
-        $whychooseus->delete();
+        $whychooseu->delete();
         return redirect('whychooseus')->with('delete', 'Deleted successfully');
     }
 

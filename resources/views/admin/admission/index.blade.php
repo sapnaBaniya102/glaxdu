@@ -38,8 +38,7 @@
                                                                     <th>Admission Skill</th>
                                                                     <th>Admission Gender</th>
                                                                     <th>Admission Message</th>
-                                                                      <th>Admission file</th>
-																	<th>Status</th>
+
 																</tr>
 															</thead>
 															<tbody>
@@ -66,8 +65,7 @@
                                                                         <td>{{ $admissions->gender }}</td>
 
                                                                         <td>{{ $admissions->message }}</td>
-                                                                         <td>{{ $admissions->file }}</td>
-																		<td>{{ $admissions->status }}</td>
+
 
 																	</tr>
  @endforeach

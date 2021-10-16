@@ -118,8 +118,7 @@ class FilesController extends Controller
         $file = new files;
         $file = files::withTrashed()->where('id',$id)->first();
         if($file->trashed()) {
-            $last_file = public_path().'/uploads/files/'.$file->file_link;
-            files::delete($last_file);
+
 
             $file->forceDelete();
             return redirect('files?data-show=trashed')->with('message','File is Deleted Parmanently.');

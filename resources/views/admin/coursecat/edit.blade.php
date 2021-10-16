@@ -44,7 +44,7 @@
                                                                 </ul>
                                                             </div>
                                                         @endif
-														<form class="form" id="kt_form" action="{{ route('coursecat.update', $coursecat->id) }}" method="POST" enctype="multipart/form-data">
+														<form class="form" id="kt_form" action="{{ route('coursecat.update', $coursecat->c_id) }}" method="POST" enctype="multipart/form-data">
                                                                 @method('PATCH')
                                                                 @csrf
 															<div class="row justify-content-center">

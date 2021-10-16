@@ -44,7 +44,7 @@
             </ul>
         </div>
     @endif
-														<form class="form" id="kt_form" action="{{ route('whychooseus.update', $whychooseus->id) }}" method="POST" enctype="multipart/form-data">
+														<form class="form" id="kt_form" action="{{ route('whychooseus.update', $whychooseu->id) }}" method="POST" enctype="multipart/form-data">
 @method('PATCH')
 @csrf
 															<div class="row justify-content-center">
@@ -59,7 +59,7 @@
 																		<div class="form-group row">
 																			<label class="col-xl-3 col-lg-3 col-form-label">Heading:</label>
 																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="heading" value="{{ $whychooseus->heading }}" type="text" />
+																				<input class="form-control form-control-solid form-control-lg" name="heading" value="{{ $whychooseu->heading }}" type="text" />
 																			</div>
 																		</div>
 																		<!--end::Group-->
@@ -68,7 +68,7 @@
 																		<div class="form-group row">
 																			<label class="col-xl-3 col-lg-3 col-form-label">Text:</label>
 																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="text" value="{{ $whychooseus->text }}" type="text" />
+																				<input class="form-control form-control-solid form-control-lg" name="text" value="{{ $whychooseu->text }}" type="text" />
 
 																			</div>
 																		</div>
@@ -78,8 +78,8 @@
 																			<label class="col-form-label col-lg-3 col-sm-12">Status</label>
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="status">
-																					<option value="{{ $whychooseus->status }}">{{ $whychooseus->status }}</option>
-																			@if ($whychooseus->status='Active')
+																					<option value="{{ $whychooseu->status }}">{{ $whychooseu->status }}</option>
+																			@if ($whychooseu->status='Active')
                                                                                     	<option >Deactive</option>
                                                                                     @else
                                                                                     <option >Active</option>

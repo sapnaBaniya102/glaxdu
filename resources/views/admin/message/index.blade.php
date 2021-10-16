@@ -33,16 +33,13 @@
 																	<th>Message Email</th>
 																	<th>Message Subject</th>
 																	<th>Message Details</th>
-																	<th>Message Phone number</th>
 
-
-																	<th>Status</th>
 																</tr>
 															</thead>
 															<tbody>
  @foreach ($message as $messages)
                                                             <tr>
-																	<td>{{ $loop->index }}</td>
+																	<td>{{ $loop->index+1 }}</td>
 																	<td>
                                                                         <form action="{{ route('message.destroy', $messages->id) }}" method="post">
 
@@ -61,8 +58,7 @@
  <td>{{ $messages->email }}</td>
   <td>{{ $messages->subject }}</td>
    <td>{{ $messages->details }}</td>
-    <td>{{ $messages->contact }}</td>
-     <td>{{ $messages->status }}</td>
+
 
 																</tr>
 
