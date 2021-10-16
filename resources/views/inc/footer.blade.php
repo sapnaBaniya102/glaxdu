@@ -8,19 +8,36 @@
                             <h4>ABOUT US</h4>
                         </div>
                         <div class="footer-about">
-                            <p>Ugiat nulla pariatur. Edeserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natu</p>
+                            @foreach ($sites as $site)
+                                @if ($site->site_key=='about')
+                                <p>{{$site->site_value}}</p>
+                                @endif
+                            @endforeach
+
                             <div class="f-contact-info">
                                 <div class="single-f-contact-info">
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='location')
                                     <i class="fa fa-home"></i>
-                                    <span>Uttara, Dhaka, Bangladesh</span>
+                                    <span>{{$site->site_value}}</span>
+                                    @endif
+                                    @endforeach
                                 </div>
                                 <div class="single-f-contact-info">
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='email')
                                     <i class="fa fa-envelope-o"></i>
-                                    <span><a href="#">education@email.com</a></span>
+                                    <span><a href="{{$site->site_value}}">{{$site->site_value}}</a></span>
+                                    @endif
+                                    @endforeach
                                 </div>
                                 <div class="single-f-contact-info">
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='phone')
                                     <i class="fa fa-phone"></i>
-                                    <span> +98 558 547 589</span>
+                                    <span> {{$site->site_value}}</span>
+                                    @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -33,13 +50,12 @@
                         </div>
                         <div class="footer-list">
                             <ul>
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="aboutus.php">About Us</a></li>
-                                <li><a href="notice.php">Examination</a></li>
-                                <li><a href="teacher.php">Teacher</a></li>
-                                <li><a href="contact.php">Contact</a></li>
-                                <li><a href="course.php">Courses</a></li>
-                                <li><a href="login.php">Admission</a></li>
+                                <li><a href="{{ url('index') }}">Home</a></li>
+                                <li><a href="{{ url('aboutus') }}">About Us</a></li>
+                                <li><a href="{{ url('notices') }}">Examination</a></li>
+                                <li><a href="{{ url('teachers') }}">Teacher</a></li>
+                                <li><a href="{{ url('contacts') }}">Contact</a></li>
+                                <li><a href="{{ url('admissions') }}">Admission</a></li>
 
                             </ul>
                         </div>
@@ -48,14 +64,14 @@
                 <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer-widget negative-mrg-30 mb-40">
                         <div class="footer-title">
-                            <h4>PAGES</h4>
+                            <h4>Activities</h4>
                         </div>
                         <div class="footer-list">
                             <ul>
-                            <li><a href="gallery.php">Gallery</a></li>
-                             <li><a href="event.php">Event</a></li>
-                              <li><a href="blog.php">Blogs</a></li>
-                               <li><a href="news.php">News</a></li>
+                            <li><a href="{{ url('galleries') }}">Gallery</a></li>
+                             <li><a href="{{ url('events') }}">Event</a></li>
+                              <li><a href="{{ url('blogs') }}">Blogs</a></li>
+                               <li><a href="{{ url('newses') }}">News</a></li>
 
                             </ul>
                         </div>
@@ -85,7 +101,7 @@
                     <div class="copyright">
                         <p>
                             Copyright ©
-                            <a href="#">GLAXDU</a>
+                            <a href="{{ url('index') }}">GLAXDU</a>
                             . All Right Reserved.
                         </p>
                     </div>
@@ -100,10 +116,21 @@
                         </div>
                         <div class="footer-social">
                             <ul>
-                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                @foreach ($sites as $site)
+                                @if ($site->site_key=='facebook')
+                                <li><a class="facebook" href="{{$site->site_value}}"><i class="fa fa-facebook"></i></a></li>
+                                @endif
+                                    @endforeach
+                                @foreach ($sites as $site)
+                                @if ($site->site_key=='youtube')
+                                <li><a class="youtube" href="{{$site->site_value}}"><i class="fa fa-youtube-play"></i></a></li>
+                                @endif
+                                    @endforeach
+                                @foreach ($sites as $site)
+                                @if ($site->site_key=='google')
+                                <li><a class="google-plus" href="{{$site->site_value}}"><i class="fa fa-google-plus"></i></a></li>
+                                @endif
+                                    @endforeach
                             </ul>
                         </div>
                     </div>

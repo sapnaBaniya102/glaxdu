@@ -22,7 +22,7 @@
                 <div class="blog-all-wrap mr-40">
                     <div class="row">
                         @foreach ($blogs as $blog)
-  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
+  <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="single-blog mb-30">
                                 <div class="blog-img">
                                     <a href="{{ url('blog_details/'.$blog->id)}}"><img src="{{ asset('uploads/files/'. $blog->img_link) }}" alt=""></a>

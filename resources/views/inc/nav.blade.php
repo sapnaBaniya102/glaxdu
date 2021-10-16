@@ -54,7 +54,7 @@
                                         <ul class="submenu">
                                             <li><a href="{{ url('aboutus') }}">About us</a></li>
                                             <li><a href="{{ url('messages') }}">Message</a></li>
-                                            <li><a href="{{ url('planning') }}">Planning</a></li>
+                                            <li><a href="{{ url('plannings') }}">Planning</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">EXAMINATION</a>
@@ -122,9 +122,9 @@
                                 </li>
                                 <li><a href="{{ url('teachers') }}">TEACHERS</a></li>
 
-                                <li><a href="#">PAGES</a>
+                                <li><a href="#">Activities</a>
                                     <ul class="submenu">
-                                            <li><a href="{{ url('gallerys') }}">Gallery</a></li>
+                                            <li><a href="{{ url('galleries') }}">Gallery</a></li>
                                             <li><a href="{{ url('events') }}">Event</a></li>
                                             <li><a href="{{ url('blogs') }}">Blogs</a></li>
                                             <li><a href="{{ url('newses') }}">News</a></li>

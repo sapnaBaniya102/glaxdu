@@ -67,12 +67,12 @@
 
                     <div class="sidebar-category mb-40">
                         <div class="sidebar-title mb-40">
-                            <h4>Category</h4>
+                            <h4>Recent Notices</h4>
                         </div>
                         <div class="category-list">
                             <ul>
                                  @foreach ($notices as $notice)
-                                  <li><a href="#">{{ $notice->category }}</a></li>
+                                  <li><a href="{{ url('notice_details/'.$notice->id) }}">{{ $notice->heading }}</a></li>
                                  @endforeach
 
 

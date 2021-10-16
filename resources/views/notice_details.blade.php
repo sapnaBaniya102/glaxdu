@@ -32,7 +32,7 @@
                                 </div>
                                 <span>{{ $notice_details->category }}</span>
                             </div>
-                            <h3>{{ $notice_details->detail }}</p>
+                            <p>{{ $notice_details->detail }}</p>
 
                             <div class="blog-share-tags">
                                 <div class="blog-share">

@@ -89,17 +89,20 @@
 
     </div>
 </div>
+
 <div class="event-area  default-overlay pt-130 pb-130" >
     <div class="container">
         <div class="section-title mb-75">
             <h2><span>Our</span> Event</h2>
 
         </div>
+
         <div class="event-active owl-carousel nav-style-1">
-        @foreach ($events as $event)
+ @foreach ($events as $event)
   <div class="single-event event-white-bg">
+
                 <div class="event-img">
-                    <a href="{{ url('event_details/'.$event->id)}}"><img src="{{ asset('uploads/files/'.$event->img_link) }}" alt=""></a>
+                    <a href="{{ url('event_details/'.$event->id)}}"><img src="{{ asset('uploads/files/'.$event->img_link) }}" alt="" style="width:50; height:200px"></a>
                     <div class="event-date-wrap">
                         <span class="event-date">{{ $event->date }}</span>
 
@@ -119,10 +122,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            @endforeach
 
+            </div>
+
+  @endforeach
         </div>
+
     </div>
 </div>
 
@@ -154,133 +159,6 @@
     </div>
 </div>
 
-<div class="achievement-area pt-130 pb-115">
-    <div class="container">
-        <div class="section-title mb-75">
-            <h2>What <span>People Say</span></h2>
-            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
-        </div>
-        <div class="testimonial-slider-wrap mt-45">
-            <div class="testimonial-text-slider">
-                <div class="testi-content-wrap">
-                    <div class="testi-big-img">
-                        <img alt="" src="assets/img/testimonial/student1.jpg">
-                    </div>
-                   <div class="row no-gutters">
-                       <div class="ml-auto col-lg-6 col-md-6">
-                           <div class="testi-content bg-img default-overlay" style="background-image:url(assets/img/bg/testi.png);">
-                                <div class="quote-style quote-left">
-                                   <i class="fa fa-quote-left"></i>
-                                </div>
-                               <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua. Ut enim  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit </p>
-                                <div class="testi-info">
-                                   <h5>AYESHA HOQUE</h5>
-                                   <span>Students Of AMMT Department</span>
-                                </div>
-                                <div class="quote-style quote-right">
-                                   <i class="fa fa-quote-right"></i>
-                                </div>
-                                <div class="testi-arrow">
-                                    <img alt="" src="assets/img/icon-img/testi-icon.png">
-                                </div>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-                <div class="testi-content-wrap">
-                   <div class="testi-big-img">
-                        <img alt="" src="assets/img/testimonial/testi-b3.jpg">
-                    </div>
-                   <div class="row no-gutters">
-                        <div class="ml-auto col-lg-6 col-md-6">
-                           <div class="testi-content bg-img default-overlay" style="background-image:url(assets/img/bg/testi.png);">
-                                <div class="quote-style quote-left">
-                                   <i class="fa fa-quote-left"></i>
-                                </div>
-                               <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua. Ut enim  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis</p>
-                                <div class="testi-info">
-                                   <h5>Tayeb Rayed</h5>
-                                   <span>Students Of AMMT Department</span>
-                                </div>
-                                <div class="quote-style quote-right">
-                                   <i class="fa fa-quote-right"></i>
-                                </div>
-                                <div class="testi-arrow">
-                                    <img alt="" src="assets/img/icon-img/testi-icon.png">
-                                </div>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-                <div class="testi-content-wrap">
-                    <div class="testi-big-img">
-                        <img alt="" src="assets/img/testimonial/testi-b2.jpg">
-                    </div>
-                   <div class="row no-gutters">
-                        <div class="ml-auto col-lg-6 col-md-6">
-                           <div class="testi-content bg-img default-overlay" style="background-image:url(assets/img/bg/testi.png);">
-                                <div class="quote-style quote-left">
-                                   <i class="fa fa-quote-left"></i>
-                                </div>
-                               <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua. Ut enim  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui. Sed ut perspiciatis unde omnis iste natus error sit </p>
-                                <div class="testi-info">
-                                   <h5>Robiul siddikee</h5>
-                                   <span>Students Of AMMT Department</span>
-                                </div>
-                                <div class="quote-style quote-right">
-                                   <i class="fa fa-quote-right"></i>
-                                </div>
-                                <div class="testi-arrow">
-                                    <img alt="" src="assets/img/icon-img/testi-icon.png">
-                                </div>
-                           </div>
-                        </div>
-                   </div>
-                </div>
-                <div class="testi-content-wrap">
-                   <div class="testi-big-img">
-                        <img alt="" src="assets/img/testimonial/testi-b2.jpg">
-                    </div>
-                    <div class="row no-gutters">
-                       <div class="ml-auto col-lg-6 col-md-6">
-                           <div class="testi-content bg-img default-overlay" style="background-image:url(assets/img/bg/testi.png);">
-                                <div class="quote-style quote-left">
-                                   <i class="fa fa-quote-left"></i>
-                                </div>
-                               <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusm od tempor incidi dunt ut labore et dolore magna aliqua. Ut enim  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit </p>
-                                <div class="testi-info">
-                                   <h5>Modhu Dada</h5>
-                                   <span>Students Of AMMT Department</span>
-                                </div>
-                                <div class="quote-style quote-right">
-                                   <i class="fa fa-quote-right"></i>
-                                </div>
-                                <div class="testi-arrow">
-                                    <img alt="" src="assets/img/icon-img/testi-icon.png">
-                                </div>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </div>
-            <div class="testimonial-image-slider">
-                <div class="sin-testi-image">
-                    <img src="assets/img/bg/teacher.jpg" alt="">
-                </div>
-                <div class="sin-testi-image">
-                    <img src="assets/img/bg/teacher.jpg" alt="">
-                </div>
-                <div class="sin-testi-image">
-                    <img src="assets/img/bg/teacher.jpg" alt="">
-                </div>
-                <div class="sin-testi-image">
-                    <img src="assets/img/bg/teacher.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 
 
 
