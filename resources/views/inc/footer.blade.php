@@ -2,7 +2,7 @@
     <div class="footer-top bg-img default-overlay pt-130 pb-80" style="background-image:url({{ asset('frontend/img/bg/bg-4.jpg') }});">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="footer-widget mb-40">
                         <div class="footer-title">
                             <h4>ABOUT US</h4>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-md-2 col-sm-12">
                     <div class="footer-widget mb-40">
                         <div class="footer-title">
                             <h4>QUICK LINK</h4>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-md-2 col-sm-12">
                     <div class="footer-widget negative-mrg-30 mb-40">
                         <div class="footer-title">
                             <h4>Activities</h4>
@@ -78,16 +78,11 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="footer-widget mb-40">
-
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <div class="footer-box">
-
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.24760131458!2d83.88657799411769!3d28.229855807896243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1631172772593!5m2!1sen!2snp" width="480" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.24760131458!2d83.88657799411769!3d28.229855807896243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1631172772593!5m2!1sen!2snp"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
-                        </div>
                     </div>
                 </div>
 
