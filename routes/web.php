@@ -56,10 +56,15 @@ Route::get('/register', 'App\Http\Controllers\LoginController@register')->name('
 
 
 Route::get('/admin/dashboard', 'App\Http\Controllers\LoginController@dashboard')->middleware('AuthCheck');
+Route::post('/message', 'App\Http\Controllers\MessageController@index')->middleware('Authcheck'
+);
+Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck');
+
+
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
 Route::resource('gallery', GalleryController::class)->middleware('AuthCheck');
-Route::resource('message', MessageController::class)->middleware('AuthCheck');
+Route::resource('message', MessageController::class);
 Route::resource('news', NewsController::class)->middleware('AuthCheck');
 Route::resource('result', resultController::class)->middleware('AuthCheck');
 Route::resource('teacher', TeacherController::class)->middleware('AuthCheck');
@@ -72,7 +77,7 @@ Route::resource('whychooseus', WhychooseusController::class)->middleware('AuthCh
 Route::resource('files', FilesController::class)->middleware('AuthCheck');
 Route::resource('course', CourseController::class)->middleware('AuthCheck');
 Route::resource('coursecat', CoursecatController::class)->middleware('AuthCheck');
-Route::resource('admission', AdmissionController::class)->middleware('AuthCheck');
+Route::resource('admission', AdmissionController::class);
 
 
 

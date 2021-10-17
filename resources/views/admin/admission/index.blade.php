@@ -16,7 +16,6 @@
 											<div class="col-md-12">
 												<div class="card card-primary">
 													<div class="card-header">
-														<h3 class="card-title">Manage Admission</h3><a href="{{ route('admission.create') }}"><button class="p-2 rounded btn-primary">Add Admission</button></a>
 													</div>
                                                                                             @if ($message = Session::get('success'))
         <div class="alert alert-success">
