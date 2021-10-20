@@ -23,7 +23,7 @@ class FilesController extends Controller
         // if($request->get('data-show')=='trashed')
         //     $files = $files->onlyTrashed();
 
-        $files = $files->latest()->get();
+        $files = $files->latest()->paginate(8);
 
         return view('admin.files.index',compact('files'));
     }

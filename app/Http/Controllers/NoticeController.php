@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\siteconfig;
+use App\Models\coursecat;
 use App\Models\notice;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\Error\Notice as ErrorNotice;
 
 class NoticeController extends Controller
 {
@@ -14,7 +17,7 @@ class NoticeController extends Controller
      */
     public function index()
     {
-         $notice=Notice::all();
+         $notice=Notice::paginate(4);
         return view('admin.notice.index',compact('notice'));
     }
 
@@ -77,6 +80,22 @@ class NoticeController extends Controller
     public function edit(notice $notice)
     {
          return view('admin.notice.edit',compact('notice'));
+    }
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $categories = Coursecat::all();
+        $sites = SiteConfig::all();
+
+        // Search in the title and body columns from the posts table
+        $notices = notice::query()
+            ->where('heading', 'LIKE', "%{$search}%")
+            ->orWhere('category', 'LIKE', "%{$search}%")
+            ->paginate(4);
+
+        // Return the search view with the resluts compacted
+        return view('notice', compact('notices', 'categories','sites'));
     }
 
     /**

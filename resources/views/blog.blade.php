@@ -43,13 +43,12 @@
                         @endforeach
 
                     </div>
-                    <div class="pro-pagination-style text-center mt-25">
-                        <ul>
-                            <li><a class="prev" href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                            <li><a class="active" href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a class="next" href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                {{ $blogs->links() }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,9 +58,9 @@
                         <div class="sidebar-title mb-40">
                             <h4>Search</h4>
                         </div>
-                        <form>
-                            <input type="text" placeholder="Search">
-                            <button><i class="fa fa-search"></i></button>
+                        <form action="{{ route('blogSearch') }}" method="GET">
+                            <input type="text" name="search" required/>
+                            <button type="submit">Search</button>
                         </form>
                     </div>
 

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\siteconfig;
+use App\Models\coursecat;
 use App\Models\result;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class resultController extends Controller
      */
     public function index()
     {
-         $result=result::all();
+         $result=result::paginate(8);
         return view('admin.result.index',compact('result'));
     }
 
@@ -67,6 +68,21 @@ class resultController extends Controller
     public function show(result $result)
     {
           return view('admin.result.show',compact('result'));
+    }
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $categories = Coursecat::all();
+        $sites = SiteConfig::all();
+
+        // Search in the title and body columns from the posts table
+        $results = result::query()
+            ->where('name', 'LIKE', "%{$search}%")
+            ->paginate(8);
+
+        // Return the search view with the resluts compacted
+        return view('result', compact('results', 'categories','sites'));
     }
 
     /**

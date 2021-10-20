@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
 
+    public function index()
+    {
+        $register=Admin_user::paginate(8);
+        return view('admin.register.index',compact('register'));
+    }
+
     public function login(){
         return view('auth.login');
     }
@@ -38,7 +44,7 @@ class LoginController extends Controller
 
 
           if ($save) {
-              return back()->with('Success', 'New User Added');
+              return redirect('register/index');
 
           } else {
               return back()->with('fail', 'Something went wrong');
@@ -80,5 +86,11 @@ class LoginController extends Controller
       public function dashboard(){
 
           return view('admin.dashboard');
+      }
+
+      public function destroy(Admin_user $admin)
+      {
+           $admin->delete();
+          return redirect('register/index')->with('delete', 'Deleted successfully');
       }
 }

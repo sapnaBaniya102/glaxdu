@@ -14,8 +14,8 @@ class AdmissionController extends Controller
      */
     public function index()
     {
-        $admission=Admission::all();
-        return view('admin.admission.index',compact('admission'));
+        $admission = Admission::paginate(8);
+        return view('admin.admission.index', compact('admission'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AdmissionController extends Controller
      */
     public function create()
     {
-         return view('admin.admission.create');
+        return view('admin.admission.create');
     }
 
     /**
@@ -37,31 +37,31 @@ class AdmissionController extends Controller
     public function store(Request $request)
     {
 
-         $request->validate([
-            'name'=>'required',
-              'email'=>'required',
-              'phone'=>'required',
-              'address'=>'required',
-              'skill'=>'required',
-              'gender'=>'required',
-              'message'=>'required',
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'skill' => 'required',
+            'gender' => 'required',
+            'message' => 'required',
 
         ]);
 
 
 
-        $admission=new Admission([
-            'name'=>$request->get('name'),
-             'email'=>$request->get('email'),
-               'phone'=>$request->get('phone'),
-               'address'=>$request->get('address'),
-               'skill'=>$request->get('skill'),
-               'gender'=>$request->get('gender'),
-               'message'=>$request->get('message'),
+        $admission = new Admission([
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
+            'address' => $request->get('address'),
+            'skill' => $request->get('skill'),
+            'gender' => $request->get('gender'),
+            'message' => $request->get('message'),
         ]);
 
         $admission->save();
-        return redirect('admissions')->with('success','Admission added successfully');
+        return redirect('admissions')->with('success', 'Admission added successfully');
     }
 
     /**
@@ -72,7 +72,7 @@ class AdmissionController extends Controller
      */
     public function show(Admission $admission)
     {
-        return view('admin.admission.show',compact('admission'));
+        return view('admin.admission.show', compact('admission'));
     }
 
     /**
@@ -83,7 +83,7 @@ class AdmissionController extends Controller
      */
     public function edit(Admission $admission)
     {
-        return view('admin.admission.edit',compact('admission'));
+        return view('admin.admission.edit', compact('admission'));
     }
 
     /**
@@ -95,18 +95,18 @@ class AdmissionController extends Controller
      */
     public function update(Request $request, Admission $admission)
     {
-         $request->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'phone'=>'required',
-            'address'=>'required',
-            'skill'=>'required',
-            'gender'=>'required',
-            'message'=>'required',
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'skill' => 'required',
+            'gender' => 'required',
+            'message' => 'required',
 
-      ]);
-      $admission->update($request->all());
-      return redirect()->route('admission.index')->with('update','Event updated successfully');
+        ]);
+        $admission->update($request->all());
+        return redirect()->route('admission.index')->with('update', 'Event updated successfully');
     }
 
     /**
@@ -117,7 +117,7 @@ class AdmissionController extends Controller
      */
     public function destroy(Admission $admission)
     {
-         $admission->delete();
+        $admission->delete();
         return redirect('admission')->with('delete', 'Deleted successfully');
     }
 }

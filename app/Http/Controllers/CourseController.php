@@ -15,7 +15,7 @@ class courseController extends Controller
      */
     public function index()
     {
-         $course=Course::all();
+         $course=Course::paginate(4);
         $coursecat=Coursecat::all();
         return view('admin.course.index',compact('course','coursecat'));
     }
