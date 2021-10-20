@@ -46,7 +46,7 @@
                                     <a href="{{ url('course_details/'.$course->id)}}"><img src="{{ asset('uploads/files/'.$course->imglink) }}" alt=""></a>
                                 </div>
                                 <div class="sidebar-recent-course-content">
-                                    <h4><a href="#">{{ $course->name }}</a></h4>
+                                    <h4><a href="#">{{ Illuminate\Support\Str::words($course->name, 3, '...') }}</a></h4>
                                     <ul>
 
                                         <li class="duration-color">Duration :{{ $course->duration }}</li>

@@ -57,9 +57,9 @@
                                                                         </form>
 																		</td>
 																		<td>{{ $blogs->tittle }}</td>
-																		<td>{{ $blogs->text }}</td>
+																		<td>{{ Illuminate\Support\Str::words($blogs->text, 15, '...') }}</td>
 																		<td>{{ $blogs->img_link }}</td>
-																		<td>{{ $blogs->details}}</td>
+																		<td>{{ Illuminate\Support\Str::words($blogs->details, 20, '...')}}</td>
                                                                         	<td>{{ $blogs->category}}</td>
 																		<td>{{ $blogs->status }}</td>
 

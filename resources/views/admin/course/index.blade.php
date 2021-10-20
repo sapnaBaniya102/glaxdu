@@ -57,7 +57,7 @@
                                                                         </form>
 																		</td>
 																		<td>{{ $courses->name }}</td>
-																		<td>{{ $courses->text }}</td>
+																		<td>{{ Illuminate\Support\Str::words($courses->text, 20, '...') }}</td>
                                                                         <td>{{ $courses->time }}</td>
 																		<td>{{ $courses->duration }}</td>
                                                                         <td>{{ $courses->imglink }}</td>

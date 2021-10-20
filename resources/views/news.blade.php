@@ -28,8 +28,8 @@
                                     <a href="{{ url('news_details/'.$news->id) }}"><img src="{{ asset('uploads/files/'.$news->imglink) }}" alt=""></a>
                                 </div>
                                 <div class="event-content">
-                                    <h3><a href="{{ url('news_details/'.$news->id) }}">{{ $news->title }}</a></h3>
-                                    <p>{{ $news->text }}</p>
+                                    <h3><a href="{{ url('news_details/'.$news->id) }}">{{ Illuminate\Support\Str::words($news->title , 6, '...')}}</a></h3>
+                                    <p>{{ Illuminate\Support\Str::words($news->text, 10, '...') }}</p>
                                     <div class="event-meta-wrap">
 
                                         <div class="blog-date event-meta ">
@@ -69,7 +69,7 @@
                                     <a href="{{ url('news_details/'.$news->id) }}"><img src="{{ asset('uploads/files/'.$news->imglink) }}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h5><a href="{{ url('news_details/'.$news->id) }}">{{ $news->title }}</a></h5>
+                                    <h5><a href="{{ url('news_details/'.$news->id) }}">{{ Illuminate\Support\Str::words($news->title, 3, '...') }}</a></h5>
                                     <span>{{ $news->category }}</span>
                                 </div>
                             </div>

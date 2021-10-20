@@ -63,7 +63,7 @@
                                     <a href="{{ url('blog_details/'.$blog->id)}}"><img src="{{ asset('uploads/files/'.$blog->img_link) }}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h5><a href="#">{{ $blog->tittle }}</a></h5>
+                                    <h5><a href="#">{{ Illuminate\Support\Str::words($blog->tittle, 3, '...') }}</a></h5>
                                     <span>{{ $blog->category }}</span>
 
                                 </div>

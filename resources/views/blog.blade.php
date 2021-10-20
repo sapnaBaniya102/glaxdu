@@ -31,7 +31,7 @@
                                     <span>{{ $blog->category }}</span>
                                     <div class="blog-content">
                                         <h4><a href="{{ url('blog_details/'.$blog->id)}}">{{ $blog->tittle }}</a></h4>
-                                        <p>{{ $blog->text }}</p>
+                                        <p>{{ Illuminate\Support\Str::words($blog->text, 30, '...') }}</p>
                                         <div class="blog-meta">
 
                                         </div>

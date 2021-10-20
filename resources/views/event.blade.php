@@ -27,14 +27,14 @@
   <div class="col-lg-4 col-md-6">
                         <div class="single-event mb-55 event-gray-bg">
                             <div class="event-img">
-                                <a href="{{ url('event_details/'.$event->id)}}"><img src="{{ asset('uploads/files/'.$event->img_link) }}" alt=""></a>
+                                <a href="{{ url('event_details/'.$event->id)}}"><img src="{{ asset('uploads/files/'.$event->img_link) }}" alt="" style="height: 150px"></a>
                                 <div class="event-date-wrap" >
                                     <span class="event-date">{{ $event->date }}</span>
 
                                 </div>
                             </div>
                             <div class="event-content">
-                                <h3><a href="{{ url('event_details/'.$event->id)}}">{{ $event->tittle }}</a></h3>
+                                <h3><a href="{{ url('event_details/'.$event->id)}}">{{ Illuminate\Support\Str::words($event->tittle, 4, '...') }}</a></h3>
 
                                 <div class="event-meta-wrap">
                                     <div class="event-meta">

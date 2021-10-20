@@ -71,7 +71,7 @@
                         <div class="category-list">
                             <ul>
                                  @foreach ($notices as $notice)
-                                  <li><a href="{{ url('notice_details/'.$notice->id) }}">{{ $notice->heading }}</a></li>
+                                  <li><a href="{{ url('notice_details/'.$notice->id) }}">{{ Illuminate\Support\Str::words($notice->heading, 6, '...') }}</a></li>
                                  @endforeach
 
 

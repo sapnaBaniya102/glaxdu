@@ -59,7 +59,7 @@
 																		<td>{{ $sliders->name }}</td>
 																		<td>{{ $sliders->header }}</td>
 																		<td>{{ $sliders->sub_heading }}</td>
-                                                                        <td>{{ $sliders->text}}</td>
+                                                                        <td>{{ Illuminate\Support\Str::words($sliders->text, 20, '...')}}</td>
                                                                         <td>{{ $sliders->img_link }}</td>
                                                                         <td>{{ $sliders->btn}}</td>
                                                                         <td>{{ $sliders->btnlink}}</td>

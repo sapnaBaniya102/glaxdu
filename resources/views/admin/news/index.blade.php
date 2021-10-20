@@ -67,7 +67,7 @@
 																		<td>{{ $newses->date }}</td>
 
 																		<td>{{ $newses->category }}</td>
-																		<td>{{ $newses->details }}</td>
+																		<td>{{ Illuminate\Support\Str::words($newses->details, 20, '...') }}</td>
                                                                         <td>
                                                                             <img src="{{ asset('uploads/files/'.$newses->imglink) }}" alt="" width="120"></td>
 																		<td>{{ $newses->status }}</td>

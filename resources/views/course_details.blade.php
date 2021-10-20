@@ -72,7 +72,7 @@
                                     <a href="#"><img class="animated" src="{{ asset('uploads/files/'.$course->imglink) }}" alt=""></a>
                                 </div>
                                 <div class="course-content">
-                                    <h4><a href="#">{{ $course->name }}</a></h4>
+                                    <h4><a href="#">{{ Illuminate\Support\Str::words($course->name, 3, '...')  }}</a></h4>
 
                                 </div>
                                 <div class="course-position-content">
@@ -107,7 +107,7 @@
                         <div class="category-list">
                             <ul>
                                 @foreach ($categories as $category)
- <li><a href="{{ url('courses/'.$category->c_id) }}">{{ $category->c_name }}</a></li>
+ <li><a href="{{ url('courses/'.$category->c_id) }}">{{ Illuminate\Support\Str::words($category->c_name, 6, '...') }}</a></li>
                                 @endforeach
 
 

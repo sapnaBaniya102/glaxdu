@@ -63,7 +63,7 @@
                                     <a href="#"><img src="{{ asset('uploads/files/'.$events->img_link) }}" alt=""></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <h5><a href="#">{{ $events->tittle }}</a></h5>
+                                    <h5><a href="#">{{ Illuminate\Support\Str::words($events->tittle, 3, '...') }}</a></h5>
 
 
                                 </div>

@@ -58,7 +58,7 @@
 																		</td>
 																		<td>{{ $notices->heading }}</td>
 																		<td>{{ $notices->date }}</td>
-																		<td>{{ $notices->detail }}</td>
+																		<td>{{ Illuminate\Support\Str::words($notices->detail, 20, '...') }}</td>
                                                                         <td>{{ $notices->category }}</td>
 
 																		<td>{{ $notices->status }}</td>

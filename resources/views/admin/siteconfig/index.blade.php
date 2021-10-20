@@ -60,7 +60,7 @@
 																	</td>
                                                                     <td>{{ $siteconfiges->site_name}}</td>
 																		<td>{{ $siteconfiges->site_key }}</td>
-																		<td>{{ $siteconfiges->site_value }}</td>
+																		<td>{{ Illuminate\Support\Str::words($siteconfiges->site_value, 20, '...') }}</td>
                                                                         <td>{{ $siteconfiges->imglink}}</td>
 																		<td>{{ $siteconfiges->status }}</td>
 

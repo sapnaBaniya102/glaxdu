@@ -62,7 +62,7 @@
 																		<td>{{ $events->time }}</td>
 																		<td>{{ $events->address }}</td>
 																		<td>{{ $events->img_link }}</td>
-																		<td>{{ $events->details}}</td>
+																		<td>{{ Illuminate\Support\Str::words($events->details, 20, '...')}}</td>
 																		<td>{{ $events->status }}</td>
 
 																	</tr>

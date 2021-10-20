@@ -54,7 +54,7 @@
 
 																	</td>
 																	<td>{{ $galleries->name }}</td>
-																	<td><img src="{{ asset('uploads/files/'.$galleries->img_link) }}" alt=""></td>
+																	<td><img src="{{ asset('uploads/files/'.$galleries->img_link) }}" style="height: 100px" alt=""></td>
 																	<td>{{ $galleries->status }}</td>
 
 																</tr>

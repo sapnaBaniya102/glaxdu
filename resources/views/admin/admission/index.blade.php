@@ -63,7 +63,7 @@
                                                                         <td>{{ $admissions->skill }}</td>
                                                                         <td>{{ $admissions->gender }}</td>
 
-                                                                        <td>{{ $admissions->message }}</td>
+                                                                        <td>{{ Illuminate\Support\Str::words($admissions->message , 20, '...')}}</td>
 
 
 																	</tr>

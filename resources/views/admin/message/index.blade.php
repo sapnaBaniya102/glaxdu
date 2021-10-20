@@ -57,7 +57,7 @@
                                                                     <td>{{ $messages->name }}</td>
  <td>{{ $messages->email }}</td>
   <td>{{ $messages->subject }}</td>
-   <td>{{ $messages->details }}</td>
+   <td>{{ Illuminate\Support\Str::words($messages->details, 20, '...') }}</td>
 
 
 																</tr>

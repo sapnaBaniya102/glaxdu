@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="event-content">
-                    <h3><a href="{{ url('event_details/'.$event->id)}}">{{ $event->tittle }}</a></h3>
+                    <h3><a href="{{ url('event_details/'.$event->id)}}">{{ Illuminate\Support\Str::words($event->tittle, 5, '...')  }}</a></h3>
 
                     <div class="event-meta-wrap">
                         <div class="event-meta">
