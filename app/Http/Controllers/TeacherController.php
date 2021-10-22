@@ -81,6 +81,8 @@ class TeacherController extends Controller
          return view('admin.teacher.edit',compact('teacher'));
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *

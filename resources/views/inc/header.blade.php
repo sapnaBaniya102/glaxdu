@@ -25,6 +25,11 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+
     <!-- Modernizer JS -->
     <script src="{{ asset('frontend/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>

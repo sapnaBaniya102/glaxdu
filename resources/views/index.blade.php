@@ -1,32 +1,26 @@
 @extends('layout.app')
 @section('content')
-<div class="slider-area">
-    <div class="slider-active owl-carousel">
-        @foreach ($sliders as $slider)
- <div class="single-slider slider-height-1 bg-img" style="background-image:url({{ asset('uploads/files/'.$slider->img_link) }});">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-7 col-12 col-sm-12">
-                        <div class="slider-content slider-animated-1 pt-230">
-                            <h1 class="animated">{{ $slider->header }}</h1>
-                            <p class="animated">{{ $slider->text }}</p>
-                            <div class="slider-btn">
-                                <a class="animated default-btn btn-green-color" href="{{ $slider->btnlink }}">{{ $slider->btn }}</a>
 
-                            </div>
-                        </div>
+<!-- Hero Slider -->
+<div id="home" class="hero-slider owl-carousel owl-theme">
+    @foreach ($sliders as $slider)
+    <div class="single-hs-item item-bg1" style="background-image:url({{ asset('uploads/files/'.$slider->img_link) }});">
+        <div class="d-table">
+            <div class="d-tablecell">
+                <div class="hero-text">
+                    <h1>{{ $slider->header }}</h1>
+                    <p>L{{ $slider->text }}</p>
+                    <div class="slider-btn">
+                    <a href="{{ $slider->btnlink }}" class="custom-btn1">{{ $slider->btn }}</a>
                     </div>
-                </div>
-                <div class="slider-single-img slider-animated-1">
-                    <img class="animated" src="{{ asset('uploads/files/'.$slider->img_link) }}" alt="">
                 </div>
             </div>
         </div>
-        @endforeach
-
-
     </div>
+    @endforeach
+
 </div>
+<!-- End Hero Slider -->
 
 
 <div class="about-us pt-130 pb-130">

@@ -62,12 +62,18 @@ Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->mid
 
 Route::get('/register/index', 'App\Http\Controllers\LoginController@index');
 Route::delete('/register/destroy/{admin}', 'App\Http\Controllers\LoginController@destroy');
+
+// search route
+
 Route::get('/notice/search', 'App\Http\Controllers\NoticeController@search')->name('noticeSearch');
 Route::get('/result/search', 'App\Http\Controllers\resultController@search')->name('resultSearch');
 Route::get('/event/search', 'App\Http\Controllers\EventController@search')->name('eventSearch');
 Route::get('/blog/search', 'App\Http\Controllers\BlogController@search')->name('blogSearch');
 Route::get('/news/search', 'App\Http\Controllers\NewsController@search')->name('newsSearch');
+Route::get('/teacher/search', 'App\Http\Controllers\TeacherController@search')->name('teacherSearch');
 
+
+// end of search route
 
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
