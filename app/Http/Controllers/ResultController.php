@@ -79,6 +79,7 @@ class resultController extends Controller
         // Search in the title and body columns from the posts table
         $results = result::query()
             ->where('name', 'LIKE', "%{$search}%")
+            ->orWhere('date', 'LIKE', "%{$search}%")
             ->paginate(8);
 
         // Return the search view with the resluts compacted

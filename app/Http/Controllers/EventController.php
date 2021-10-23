@@ -39,6 +39,9 @@ class EventController extends Controller
         $Events = Event::query()
             ->where('tittle', 'LIKE', "%{$search}%")
             ->orWhere('address', 'LIKE', "%{$search}%")
+            ->orWhere('date', 'LIKE', "%{$search}%")
+            ->orWhere('time', 'LIKE', "%{$search}%")
+            ->orWhere('address', 'LIKE', "%{$search}%")
             ->paginate(9);
 
         // Return the search view with the resluts compacted

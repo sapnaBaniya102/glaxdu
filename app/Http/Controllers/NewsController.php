@@ -39,6 +39,7 @@ class NewsController extends Controller
         $newses = News::query()
             ->where('title', 'LIKE', "%{$search}%")
             ->orWhere('category', 'LIKE', "%{$search}%")
+            ->orWhere('date', 'LIKE', "%{$search}%")
             ->paginate(4);
 
         // Return the search view with the resluts compacted

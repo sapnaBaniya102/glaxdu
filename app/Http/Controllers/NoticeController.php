@@ -92,6 +92,7 @@ class NoticeController extends Controller
         $notices = notice::query()
             ->where('heading', 'LIKE', "%{$search}%")
             ->orWhere('category', 'LIKE', "%{$search}%")
+            ->orWhere('date', 'LIKE', "%{$search}%")
             ->paginate(4);
 
         // Return the search view with the resluts compacted
