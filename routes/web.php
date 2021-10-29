@@ -80,7 +80,7 @@ Route::resource('galleryCategory', GalleryCategoryController::class)->middleware
 Route::resource('gallery', GalleryController::class)->middleware('AuthCheck');
 Route::get('message', 'App\Http\Controllers\MessageController@index')->middleware('AuthCheck')->name('message.index');
 Route::post('message/store', 'App\Http\Controllers\MessageController@store')->name('message.store');
-Route::delete('message/destroy', 'App\Http\Controllers\MessageController@destroy')->name('message.destroy');
+Route::delete('message/destroy/{message}', 'App\Http\Controllers\MessageController@destroy')->name('message.destroy');
 Route::resource('news', NewsController::class)->middleware('AuthCheck');
 Route::resource('result', resultController::class)->middleware('AuthCheck');
 Route::resource('teacher', TeacherController::class)->middleware('AuthCheck');
@@ -95,7 +95,7 @@ Route::resource('course', CourseController::class)->middleware('AuthCheck');
 Route::resource('coursecat', CoursecatController::class)->middleware('AuthCheck');
 Route::get('admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck')->name('admission.index');
 Route::post('admission/store', 'App\Http\Controllers\AdmissionController@store')->name('admission.store');
-Route::delete('admission/destroy', 'App\Http\Controllers\AdmissionController@destroy')->name('admission.destroy');
+Route::delete('admission/destroy/{admission}', 'App\Http\Controllers\AdmissionController@destroy')->name('admission.destroy');
 
 
 Route::get('/index','App\Http\Controllers\IndexController@index');

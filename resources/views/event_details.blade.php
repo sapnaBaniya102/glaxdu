@@ -9,7 +9,7 @@
     <div class="breadcrumb-bottom">
         <div class="container">
             <ul>
-                <li><a href="{{ url('index') }}">Home</a> <span><i class="fa fa-angle-double-right"></i><a href="{{ url('event') }}">Home</a> Event Details</span></li>
+                <li><a href="{{ url('index') }}">Home</a> <span><i class="fa fa-angle-double-right"></i>Event Details</span></li>
             </ul>
         </div>
     </div>
