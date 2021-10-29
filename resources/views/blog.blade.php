@@ -10,7 +10,7 @@
     <div class="breadcrumb-bottom">
         <div class="container">
             <ul>
-                <li><a href="index.php">Home</a> <span><i class="fa fa-angle-double-right"></i>Blog </span></li>
+                <li><a href="{{ url('index') }}">Home</a> <span><i class="fa fa-angle-double-right"></i>Blog </span></li>
             </ul>
         </div>
     </div>

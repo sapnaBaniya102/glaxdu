@@ -34,9 +34,9 @@
             </div>
         </div>
     </div>
-    <div class="header-bottom sticky-bar clearfix">
+    <div class="header-bottom sticky-bar stick clearfix">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <div class="col-lg-2 col-md-6 col-4">
                     <div class="logo">
                         <a href="{{ url('index') }}">
@@ -92,8 +92,12 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-menu-area">
+            <div class="mobile-menu-area ">
+
                 <div class="mobile-menu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fas fa-bars"></i>
+                      </button>
                     <nav id="mobile-menu-active">
                         <ul class="menu-overflow">
                         <li><a href="{{ url('index') }}"> HOME </a></li>

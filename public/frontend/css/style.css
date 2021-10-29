@@ -1781,7 +1781,7 @@ textarea:focus {
   border-bottom: 0 solid #4a90e2;
   -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 999;
